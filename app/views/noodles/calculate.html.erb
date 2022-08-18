@@ -1,0 +1,32 @@
+<div>
+    <div>
+      <%= form_for @noodle, :as => :calculate, :url => noodles_calculate_path do |f| %>
+        <div>
+          <label>Primeira ampulheta</label>
+          <%= f.number_field :first_hourglass, class:'form-control' %>
+        </div>
+        <div>
+          <label>Segunda ampulheta</label>
+          <%= f.number_field :second_hourglass, class:'form-control' %>
+        </div>
+        <div>
+          <label>Tempo de cozimento</label>
+          <%= f.number_field :time_to_cook, class:'form-control' %>
+        </div>
+        <button type="submit" style="margin-top: 10px;">
+        Enviar </button>
+        <%= link_to root_path do %>
+          <%= 'Voltar' %>
+        <% end %>
+        <br>
+        <% if @result %>
+          <% if @result.is_a?(String) %>
+            <%= @result %>
+          <% else %>
+            <%= "Serão necessários #{@result} minutos para Cozinhar" %>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,4 @@
+pt-BR:
+  noodles:
+    calculate_required_param: "O Parâmetro %{param} é obrigatório"
+    time_cant_be_the_same: "O tempo da primeira e segunda ampulheta não podem ser iguais"
